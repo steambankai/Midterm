@@ -17,19 +17,23 @@ import java.util.Scanner;
  * @author sivagamasrinivasan
  jn 22nd
  */
-public class Days {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-         
-    Scanner in =new Scanner(System.in);
-    System.out.println("Enter the day number (one,two,three,four,five) in string");
-    String code = in.next();
-    Weekdays t= new Weekdays();
-    t.nameOfDay(code); 
-    }// TODO code application logic here
+
     
-    
+
+// Define an enum for the days of the week
+enum Day {
+    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
 }
+
+public class Days {
+    public static void main(String[] args) {
+        // Iterate through the enum values and print each day
+        for (Day day : Day.values()) {
+            System.out.println(day);
+        }
+    }
+}
+    
+    
+
